@@ -1,0 +1,58 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:engine="UnityEngine.UIElements"
+             xmlns:editor="UnityEditor.UIElements"
+             noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd"
+             editor-extension-mode="False">
+
+  <Style src="project://database/Assets/login/UI Scripst/Red.uss" />
+
+  <engine:VisualElement name="Contenedor" class="contenedor">
+    <engine:VisualElement name="PanelDerecho" class="panel-derecho">
+
+      <!-- LOGIN -->
+      <engine:VisualElement name="Login" class="captura-datos">
+        <engine:Label text="Status" name="Text" class="label-mensaje" />
+        <engine:TextField label="Username:" name="LoginUser" />
+        <engine:TextField label="Password:" name="LoginPass" />
+        <engine:Button text="Login" name="LoginButton" class="botn-envia" />
+        <engine:Button text="Register" name="RegisterButton" class="botn-envia" />
+      </engine:VisualElement>
+
+      <!-- REGISTER -->
+      <engine:VisualElement name="Register" class="captura-datos" style="display: none;">
+        <engine:Label text="Status" name="Text" class="label-mensaje" />
+
+        <engine:TextField label="Username:" name="UserNameInput" />
+        <engine:TextField label="Email:" name="EmailInput" />
+        <engine:TextField label="Password:" name="Password" />
+        <engine:TextField label="Repeat Password:" name="Password" />
+
+        <engine:Label text="Date of Birth:" class="label-seccion" />
+        <engine:VisualElement name="FechaContainer" style="flex-direction: row; gap: 10px;">
+          <engine:DropdownField label="Day" name="DayDropdown" />
+          <engine:DropdownField label="Month" name="MonthDropdown" />
+          <engine:DropdownField label="Year" name="YearDropdown" />
+        </engine:VisualElement>
+
+        <engine:Label text="Gender:" class="label-seccion" />
+        <engine:DropdownField name="GenderDropdown" />
+
+        <engine:Label text="Continent:" class="label-seccion" />
+        <engine:DropdownField name="ContinentDropdown" />
+
+        <engine:Label text="Country:" class="label-seccion" />
+        <engine:DropdownField name="CountryDropdown" />
+
+        <!-- Hidden fields for device info -->
+        <engine:TextField name="DeviceModelField" style="display: none;" />
+        <engine:TextField name="OSField" style="display: none;" />
+        <engine:TextField name="PlatformField" style="display: none;" />
+        <engine:TextField name="SystemLangField" style="display: none;" />
+
+        <engine:Button text="Login" name="LoginButton" class="botn-envia" />
+        <engine:Button text="Register" name="RegisterButton" class="botn-envia" />
+      </engine:VisualElement>
+
+    </engine:VisualElement>
+  </engine:VisualElement>
+</engine:UXML>
